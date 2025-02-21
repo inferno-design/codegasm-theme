@@ -1,0 +1,17 @@
+.github/**
+.husky/**
+.vscode/**
+.vscode-test/**
+.*
+QUICKSTART.md
+reference/**
+releases/**
+src/**
+tests/**
+commitlint.config.js
+CONTRIBUTING.md
+eslint.config.js
+package.json
+pnpm-lock.yaml
+tsconfig.json
+

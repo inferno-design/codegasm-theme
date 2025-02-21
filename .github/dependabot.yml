@@ -1,0 +1,61 @@
+# Dependabot configuration
+version: 2
+registries:
+  github:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    username: ${{ secrets.NODE_AUTH_USERNAME }}
+    password: ${{ secrets.NODE_AUTH_TOKEN }}
+    replaces-base: false # false to allow other dependencies to be resolved from the public registry
+updates:
+  # Maintain dependencies for Node
+  - package-ecosystem: npm
+    registries: '*'
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '05:00'
+      timezone: America/Phoenix
+    assignees:
+      - ahenriksen-inferno
+    reviewers:
+      - ahenriksen-inferno
+    labels:
+      - build
+      - dependencies
+    commit-message:
+      prefix: 'build(npm): '
+    versioning-strategy: auto
+    ignore:
+      - dependency-name: '*'
+        update-types: [ 'version-update:semver-major' ]
+    groups:
+      npm:
+        patterns: [ '*' ]
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: github-actions
+    registries: '*'
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '05:00'
+      timezone: America/Phoenix
+    assignees:
+      - ahenriksen-inferno
+    reviewers:
+      - ahenriksen-inferno
+    labels:
+      - build
+      - dependencies
+    commit-message:
+      prefix: 'build(github-actions): '
+    versioning-strategy: auto
+    ignore:
+      - dependency-name: '*'
+        update-types: [ 'version-update:semver-major' ]
+    groups:
+      github-actions:
+        patterns: [ '*' ]

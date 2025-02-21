@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx,ts,tsx,yml,yaml,json,jsonc,md,mdx}": ["eslint --fix"],
+  "*.{md,mdx}": ["markdownlint --fix"]
+}
