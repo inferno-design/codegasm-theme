@@ -1,5 +1,5 @@
-name: CodeQL Analysis
-run-name: CodeQL Analysis
+name: CodeQL
+run-name: CodeQL
 
 concurrency:
   group: '${{ github.workflow }} - ${{ github.ref }}'
