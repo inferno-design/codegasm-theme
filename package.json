@@ -3,7 +3,7 @@
   "name": "codegasm-theme",
   "displayName": "Codegasm Theme",
   "description": "A dark theme for Visual Studio Code.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -29,7 +29,7 @@
   ],
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.96.0"
   },
   "packageManager": "pnpm@10.4.1",
   "contributes": {
@@ -65,7 +65,7 @@
     "@types/fs-extra": "11.0.4",
     "@types/node": "22.13.4",
     "@types/tinycolor2": "1.4.6",
-    "@types/vscode": "1.97.0",
+    "@types/vscode": "1.96.0",
     "@vscode/vsce": "3.2.2",
     "bumpp": "10.0.3",
     "eslint": "9.20.1",
