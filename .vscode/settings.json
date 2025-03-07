@@ -27,12 +27,15 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": false,
+  "editor.formatOnType": false,
   "eslint.codeActionsOnSave.mode": "all",
   "eslint.enable": true,
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.probe": [
+    "github-actions-workflow",
     "javascript",
     "javascriptreact",
     "json",
@@ -45,6 +48,7 @@
   "eslint.problems.shortenToSingleLine": false,
   "eslint.useFlatConfig": true,
   "eslint.validate": [
+    "github-actions-workflow",
     "javascript",
     "javascriptreact",
     "json",
@@ -56,7 +60,6 @@
   ],
   "npm.packageManager": "pnpm",
   "prettier.enable": false,
-  "stylelint.enable": false,
   "yaml.format.singleQuote": true,
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": "./node_modules/typescript/lib"

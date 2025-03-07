@@ -31,7 +31,7 @@
   "engines": {
     "vscode": "^1.96.0"
   },
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.6.1",
   "contributes": {
     "themes": [
       {
@@ -46,8 +46,8 @@
     "theme": "dark"
   },
   "scripts": {
-    "build": "esno src/index.ts",
-    "dev": "esno watch src/index.ts",
+    "build": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts --include './src/**/*.ts'",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "package": "vsce package --no-dependencies --out ./releases/ --no-yarn",
@@ -56,29 +56,30 @@
     "vscode:prepublish": "npm run build"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.7.1",
-    "@commitlint/config-conventional": "19.7.1",
-    "@commitlint/format": "19.5.0",
-    "@commitlint/types": "19.5.0",
-    "@inferno-design/eslint-config": "2.2.1",
-    "@inferno-design/typescript-config": "1.4.0",
-    "@types/fs-extra": "11.0.4",
-    "@types/node": "22.13.4",
-    "@types/tinycolor2": "1.4.6",
-    "@types/vscode": "1.96.0",
-    "@vscode/vsce": "3.2.2",
-    "bumpp": "10.0.3",
-    "eslint": "9.20.1",
-    "esno": "4.8.0",
-    "fs-extra": "11.3.0",
-    "ovsx": "0.10.1",
-    "prettier": "3.5.1",
-    "tinycolor2": "1.6.0",
-    "typescript": "5.7.3"
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/format": "^19.8.0",
+    "@commitlint/types": "^19.8.0",
+    "@inferno-design/eslint-config": "^2.5.0",
+    "@inferno-design/typescript-config": "^1.7.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.9",
+    "@types/tinycolor2": "^1.4.6",
+    "@types/vscode": "^1.98.0",
+    "@vscode/vsce": "^3.2.2",
+    "bumpp": "^10.0.3",
+    "eslint": "^9.21.0",
+    "fs-extra": "^11.3.0",
+    "ovsx": "^0.10.1",
+    "prettier": "^3.5.3",
+    "tinycolor2": "^1.6.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@vscode/vsce-sign"
+      "@vscode/vsce-sign",
+      "esbuild"
     ]
   }
 }
