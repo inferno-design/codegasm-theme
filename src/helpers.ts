@@ -1,18 +1,6 @@
 import tinycolor from 'tinycolor2'
 
 /**
- * Set the alpha value of a color
- *
- * @param {string} hex - The hex color to set the alpha value of
- * @param {number} alpha - The alpha value to set the color to
- *
- * @returns {string} The hex color with the alpha value set
- */
-export function setAlpha(hex: string, alpha: number): string {
-  return tinycolor(hex).setAlpha(alpha).toHex8String().toUpperCase()
-}
-
-/**
  * Brighten a color
  *
  * @param {string} hex - The hex color to brighten
@@ -46,4 +34,16 @@ export function darken(hex: string, percent: number): string {
  */
 export function desaturate(hex: string, percent: number): string {
   return tinycolor(hex).desaturate(percent).toHex8String().toUpperCase()
+}
+
+/**
+ * Set the alpha value of a color
+ *
+ * @param {string} hex - The hex color to set the alpha value of
+ * @param {number} alpha - The alpha value to set the color to
+ *
+ * @returns {string} The hex color with the alpha value set
+ */
+export function setAlpha(hex: string, alpha: number): string {
+  return tinycolor(hex).setAlpha(alpha).toHex8String().toUpperCase()
 }

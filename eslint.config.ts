@@ -2,10 +2,7 @@ import { config, GLOB_MARKDOWN } from '@inferno-design/eslint-config'
 
 export default config(
   {
-    stylistic: true,
-    typescript: {
-      tsconfigPath: 'tsconfig.json',
-    },
+    type: 'app',
   },
   {
     files: [GLOB_MARKDOWN],
@@ -16,6 +13,7 @@ export default config(
   {
     rules: {
       'no-console': 'off',
+      'perfectionist/sort-objects': 'off',
       'ts/no-unsafe-argument': 'off',
       'ts/no-unsafe-assignment': 'off',
       'ts/no-unsafe-call': 'off',

@@ -1,20 +1,8 @@
 import { promises as fs } from 'node:fs'
 import process from 'node:process'
 import prettier from 'prettier'
-import { getTheme } from './theme'
 
-/**
- * Prettifies a JSON object
- *
- * @param {unknown} object - The object to prettify
- *
- * @returns {Promise<string>} The prettified object
- */
-async function prettify(object: unknown): Promise<string> {
-  return prettier.format(JSON.stringify(object, undefined, 2), {
-    parser: 'json',
-  })
-}
+import { getTheme } from './theme'
 
 /**
  * Generates the theme
@@ -35,6 +23,19 @@ async function main(): Promise<void> {
   }
 
   console.log('Finished generating theme!')
+}
+
+/**
+ * Prettifies a JSON object
+ *
+ * @param {unknown} object - The object to prettify
+ *
+ * @returns {Promise<string>} The prettified object
+ */
+async function prettify(object: unknown): Promise<string> {
+  return prettier.format(JSON.stringify(object, undefined, 2), {
+    parser: 'json',
+  })
 }
 
 void main()

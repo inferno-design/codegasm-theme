@@ -1,6 +1,8 @@
+import type { UserConfig } from '@commitlint/types'
+
 import { RuleConfigSeverity } from '@commitlint/types'
 
-const Configuration = {
+const Configuration: UserConfig = {
   extends: ['@commitlint/config-conventional'],
   parserPreset: 'conventional-changelog-atom',
   formatter: '@commitlint/format',
